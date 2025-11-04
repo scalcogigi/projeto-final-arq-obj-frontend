@@ -20,6 +20,7 @@ function App() {
         <Route path="/homepage" element={<HomePage />}/>
         <Route path="/cadastrobanda" element={<BandRegisterPage />}/>
         <Route path="/cadastromembro" element={<MemberRegisterPage />}/>
+        <Route path="/Login" element={<Login />}/>
       </Routes>
     </div>
   );
