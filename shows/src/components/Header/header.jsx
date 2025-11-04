@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Header.css";
+import "./header.css";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <header className="header">
-      <h1 className="header-logo" onClick={() => navigate("/banda")}>
+      <h1 className="header-logo" onClick={() => navigate("/homepage")}>
         TourDB
       </h1>
 

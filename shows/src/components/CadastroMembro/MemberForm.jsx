@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FormField from "./FormField.jsx";
+import FormField from "../FormField.jsx";
 
 export default function MemberForm() {
   const [form, setForm] = useState({

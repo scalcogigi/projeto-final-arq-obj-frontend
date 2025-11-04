@@ -1,7 +1,6 @@
-
 import React from "react";
-import Header from "./Header.jsx";
-import SectionBar from "./SectionBar.jsx";
+import Header from "../Header/header.jsx";
+import SectionBar from "../Homepage/SectionBar.jsx";
 import BandForm from "./BandForm.jsx";
 
 export default function BandRegisterPage() {
@@ -10,7 +9,6 @@ export default function BandRegisterPage() {
       <div className="page__title">CADASTRO BANDA</div>
 
       <Header />
-      {/* você pode mudar o texto se quiser */}
       <SectionBar title="BANDA" />
 
       <BandForm />

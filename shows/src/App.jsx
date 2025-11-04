@@ -3,7 +3,10 @@ import './App.css'
 import Login from './components/Login/Login.jsx'
 import Banda from "./components/Banda/banda.jsx";
 import Membros from "./components/Membros/membros.jsx";
+import HomePage from "./components/Homepage/HomePage.jsx";
 import { Routes, Route } from "react-router-dom";
+import MemberRegisterPage from "./components/CadastroMembro/MemberRegisterPage.jsx";
+import BandRegisterPage from "./components/CadastroBanda/BandRegisterPage.jsx";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +17,9 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/banda" element={<Banda />} />
         <Route path="/membros" element={<Membros />} />
+        <Route path="/homepage" element={<HomePage />}/>
+        <Route path="/cadastrobanda" element={<BandRegisterPage />}/>
+        <Route path="/cadastromembro" element={<MemberRegisterPage />}/>
       </Routes>
     </div>
   );

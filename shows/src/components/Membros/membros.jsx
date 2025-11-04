@@ -6,7 +6,6 @@ import "./Membros.css";
 export default function Membros() {
   const [membros, setMembros] = useState([]);
 
-  // mock:
   // useEffect(() => {
   //   const fetchMembros = async () => {
   //     try {
@@ -14,7 +13,6 @@ export default function Membros() {
   //       setMembros(response.data);
   //     } catch (error) {
   //       console.error("Erro ao buscar membros:", error);
-  //       alert("Não foi possível carregar os membros. Verifique se o backend está rodando.");
   //     }
   //   };
 

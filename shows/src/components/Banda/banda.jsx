@@ -11,7 +11,7 @@ export default function Banda() {
   useEffect(() => {
     const fetchBandas = async () => {
       try {
-        const response = await api.get("/banda"); 
+        const response = await api.get("/homepage"); 
         setBandas(response.data);
       } catch (error) {
         console.error("Erro ao buscar bandas:", error);
