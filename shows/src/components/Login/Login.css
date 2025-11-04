@@ -106,3 +106,16 @@ button:hover {
     font-size: 0.95rem;
   }
 }
+
+.login-register {
+  text-align: center;
+  color: #ff625f;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.login-register:hover {
+  color: #ff9494;
+}

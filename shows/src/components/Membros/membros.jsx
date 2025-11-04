@@ -6,28 +6,14 @@ import "./Membros.css";
 export default function Membros() {
   const [membros, setMembros] = useState([]);
 
-  // useEffect(() => {
-  //   const fetchMembros = async () => {
-  //     try {
-  //       const response = await api.get("/membro"); 
-  //       setMembros(response.data);
-  //     } catch (error) {
-  //       console.error("Erro ao buscar membros:", error);
-  //     }
-  //   };
-
-  //   fetchMembros();
-  // }, []);
-
   useEffect(() => {
     const fetchMembros = async () => {
-      const fakeData = [
-        { id: 1, nome: "Ana", ocupacao: "Vocalista" },
-        { id: 2, nome: "João", ocupacao: "Baixista" },
-        { id: 3, nome: "Lucas", ocupacao: "Teclado" },
-      ];
-
-      setMembros(fakeData);
+      try {
+        const response = await api.get("/membro"); 
+        setMembros(response.data);
+      } catch (error) {
+        console.error("Erro ao buscar membros:", error);
+      }
     };
 
     fetchMembros();

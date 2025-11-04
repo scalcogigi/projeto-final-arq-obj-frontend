@@ -35,7 +35,6 @@ export default function LoginPage() {
       <Header />
       <div className="login-container">
         <div className="login-box">
-          <h2>TourDB</h2>
           <form onSubmit={handleSubmit}>
             <label>Email</label>
             <input
@@ -53,7 +52,7 @@ export default function LoginPage() {
             />
             <button type="submit">Entrar</button>
           </form>
-          <p onClick={() => navigate("/cadastromembro")} style={{ color: "#ff625f", cursor: "pointer" }}>
+          <p className="login-register" onClick={() => navigate("/cadastromembro")} style={{ color: "#ff625f", cursor: "pointer" }}>
             Criar conta
           </p>
         </div>
