@@ -5,6 +5,8 @@ body, html, #root {
   width: 100%;
   background-color: #1e1e1e;
   font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .login-container {
