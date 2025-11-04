@@ -66,3 +66,12 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.main-below-header {
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;       
+  justify-content: center;   
+  padding: 20px;
+  box-sizing: border-box;
+}
