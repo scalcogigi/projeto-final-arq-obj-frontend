@@ -24,7 +24,7 @@ export default function MemberForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(form), // { nome, cpf, ocupacao, bandas }
+        body: JSON.stringify(form), 
       });
 
       if (!response.ok) {

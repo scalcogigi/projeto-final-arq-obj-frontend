@@ -4,7 +4,6 @@ import "./header.css";
 
 export default function Header() {
   const navigate = useNavigate();
-
   const handleLogout = () => {
     localStorage.removeItem("token");
     navigate("/");
@@ -12,6 +11,7 @@ export default function Header() {
 
   return (
     <header className="header">
+        <div className="header-content">
       <h1 className="header-logo" onClick={() => navigate("/homepage")}>
         TourDB
       </h1>
@@ -23,6 +23,7 @@ export default function Header() {
           Sair
         </button>
       </nav>
+      </div>
     </header>
   );
 }
