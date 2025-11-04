@@ -40,3 +40,210 @@
 .read-the-docs {
   color: #888;
 }
+:root{
+  --bg: #0f0f10;          /* page background (near black) */
+  --maroon: #6B0000;      /* primary deep red */
+  --maroon-dark: #4A0000; /* card fill */
+  --bar: #2a2a2a;         /* dark gray bars */
+  --text: #e7b3b3;        /* soft pinkish text */
+}
+
+html, body, #root { height: 100%; }
+body { margin: 0; background: var(--bg); font-family: system-ui, Arial, sans-serif; color: var(--text); }
+
+.page { min-height: 100vh; display: flex; flex-direction: column; }
+
+/* Header */
+.header {
+  background: var(--maroon);
+  padding: 24px 16px;
+  text-align: center;
+}
+.header__title {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
+
+/* Section title bar */
+.sectionbar {
+  background: var(--bar);
+  padding: 14px 16px;
+  text-align: center;
+  border-top: 8px solid var(--bg);      /* small spacer accent */
+  border-bottom: 8px solid var(--bg);
+}
+.sectionbar__title {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 1px;
+}
+
+/* Grid */
+.gridWrap {
+  flex: 1;
+  padding: 16px 16px 32px;
+  /* Optional alternating row vibe with subtle stripes */
+  background:
+    linear-gradient(var(--bar), var(--bar)) 0 33% / 100% 8px no-repeat,
+    linear-gradient(var(--bar), var(--bar)) 0 66% / 100% 8px no-repeat;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+}
+
+/* Card */
+.card {
+  background: var(--maroon-dark);
+  border-radius: 8px;
+  height: 220px;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.35), 0 6px 14px rgba(0,0,0,0.4);
+}
+
+.card__footer {
+  width: 100%;
+  padding: 14px 16px;
+  border-top: 6px solid var(--bar); /* echoes the “stripe” feel */
+}
+
+.card__band { font-weight: 600; letter-spacing: 0.5px; }
+.card__date { opacity: 0.85; margin-top: 2px; }
+
+:root{
+  --bg: #0f0f10;
+  --maroon: #6B0000;
+  --maroon-dark: #4A0000;
+  --bar: #2a2a2a;
+  --text: #e7b3b3;
+}
+
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: #f5f5f5;          /* fundo clarinho para parecer o mock */
+  font-family: system-ui, Arial, sans-serif;
+  color: #111;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* centraliza “o card” no meio da tela */
+.page--centered {
+  align-items: center;
+}
+
+/* título “CADASTRO MEMBRO” */
+.page__title {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+/* Header e bar reaproveitados da home */
+.header {
+  background: var(--maroon);
+  padding: 18px 16px;
+  text-align: center;
+  width: 100%;
+  max-width: 520px;
+}
+
+.header__title {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--text);
+}
+
+.sectionbar {
+  background: var(--bar);
+  padding: 10px 16px;
+  text-align: center;
+  width: 100%;
+  max-width: 520px;
+}
+
+.sectionbar__title {
+  margin: 0;
+  color: var(--text);
+  letter-spacing: 0.15em;
+  font-size: 0.9rem;
+}
+
+/* bloco escuro do formulário */
+.panel {
+  background: var(--bar);
+  width: 100%;
+  max-width: 520px;
+  padding: 32px 40px 48px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+/* form */
+.form {
+  width: 100%;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 22px;
+  color: var(--text);
+}
+
+.form__label {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+}
+
+.form__input {
+  border: none;
+  outline: none;
+  padding: 10px 18px;
+  border-radius: 999px;          /* pill */
+  background: var(--maroon);
+  color: #ffecec;
+  font-size: 0.95rem;
+}
+
+.form__input::placeholder {
+  color: rgba(255, 210, 210, 0.6);
+}
+
+.form__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+/* botão */
+.btn {
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  padding: 10px 24px;
+  border-radius: 999px;
+}
+
+.btn--primary {
+  background: var(--maroon);
+  color: #ffecec;
+}
+
+.btn--primary:hover {
+  filter: brightness(1.1);
+}
+
