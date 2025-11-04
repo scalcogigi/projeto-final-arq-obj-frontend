@@ -5,16 +5,15 @@ import { useNavigate } from "react-router-dom";
 export default function Header() {
   const navigate = useNavigate();
 
-  // verifica login no localStorage
   const isLoggedIn = localStorage.getItem("token") !== null;
 
   function handleLogin() {
-    navigate("/login"); // redireciona para a página de login
+    navigate("/login");
   }
 
   function handleLogout() {
-    localStorage.removeItem("token"); // remove o "login"
-    navigate("/"); // volta para a home
+    localStorage.removeItem("token");
+    navigate("/");
   }
 
   return (
@@ -26,9 +25,17 @@ export default function Header() {
           alignItems: "center",
           maxWidth: "1200px",
           margin: "0 auto",
+          cursor: "pointer",
         }}
       >
-        <h1 className="header__title">TourDB</h1>
+        {/* Título clicável */}
+        <h1
+          className="header__title"
+          style={{ cursor: "pointer" }}
+          onClick={() => navigate("/homepage")}
+        >
+          TourDB
+        </h1>
 
         <div style={{ display: "flex", gap: "12px" }}>
           <button className="btn btn--outline" onClick={() => navigate("/banda")}>
