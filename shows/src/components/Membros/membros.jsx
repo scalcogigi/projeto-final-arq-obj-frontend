@@ -41,9 +41,6 @@ export default function Membros() {
     <div className="membros-container">
 
       <div className="membros-box">
-        <div className="membros-header">
-        </div>
-
         <div className="membros-grid">
           {membros.map((membro) => (
             <div key={membro.id} className="membro-card">
