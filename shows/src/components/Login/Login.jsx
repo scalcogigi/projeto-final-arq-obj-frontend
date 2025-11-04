@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import api from "../../services/api";
 import "./Login.css";
 
 export default function LoginPage() {
@@ -7,16 +8,34 @@ export default function LoginPage() {
   const [senha, setSenha] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // mock:
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
 
-    // Simulação de login simples
-    if (email === "teste@tourdb.com" && senha === "1234") {
-      navigate("/home");
-    } else {
+  //   if (email === "teste@tourdb.com" && senha === "1234") {
+  //     navigate("/banda");
+  //   } else {
+  //     alert("Email ou senha incorretos!");
+  //   }
+  // };
+
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+
+    try {
+      const response = await api.post("usuarios/login", {
+        email: email,
+        password: senha,
+      });
+
+      localStorage.setItem("token", response.data);
+
+      navigate("/banda");
+    } catch (err) {
       alert("Email ou senha incorretos!");
+      console.error(err);
     }
-  };
+};
 
   return (
     <div className="login-container">

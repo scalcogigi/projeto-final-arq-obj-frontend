@@ -1,7 +1,29 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import api from "../../services/api";
 import "./Banda.css";
 
 export default function Banda() {
+  const [bandas, setBandas] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchBandas = async () => {
+      try {
+        const response = await api.get("/banda"); 
+        setBandas(response.data);
+      } catch (error) {
+        console.error("Erro ao buscar bandas:", error);
+        alert("Erro ao carregar bandas. Verifique se o backend está rodando.");
+      }
+    };
+
+  fetchBandas();
+  }, []);
+
+  const handleGoToMembros = () => {
+    navigate("/membros");
+  };
   return (
     <div className="banda-container">
       <h1 className="banda-titulo">BANDA</h1>
@@ -17,7 +39,8 @@ export default function Banda() {
 
             <div className="banda-detalhes">
               <h3>Nome</h3>
-              <p className="banda-membros">Membros</p>
+              <p className="banda-membros" onClick={handleGoToMembros}
+                style={{ cursor: "pointer", color: "#ff625fff" }}>Membros</p>
             </div>
           </div>
 

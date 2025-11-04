@@ -1,13 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import api from "../../services/api";
 import "./Membros.css";
 
 export default function Membros() {
-  const membros = [
-    { id: 1, nome: "nome" },
-    { id: 2, nome: "nome" },
-    { id: 3, nome: "nome" },
-    { id: 4, nome: "nome" },
-  ];
+  const [membros, setMembros] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchMembros = async () => {
+  //     try {
+  //       const response = await api.get("/membro"); 
+  //       setMembros(response.data);
+  //     } catch (error) {
+  //       console.error("Erro ao buscar membros:", error);
+  //       alert("Não foi possível carregar os membros. Verifique se o backend está rodando.");
+  //     }
+  //   };
+
+  //   fetchMembros();
+  // }, []);
+
+  useEffect(() => {
+    const fetchMembros = async () => {
+      const fakeData = [
+        { id: 1, nome: "Giovanna", ocupacao: "Vocalista" },
+        { id: 2, nome: "Felipe", ocupacao: "Baixista" },
+        { id: 3, nome: "Carlos", ocupacao: "Teclado" },
+      ];
+
+      setMembros(fakeData);
+    };
+
+    fetchMembros();
+  }, []);
 
   return (
     <div className="membros-container">
