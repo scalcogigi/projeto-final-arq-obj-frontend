@@ -8,12 +8,14 @@ body, html, #root {
 .banda-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;   
+  align-items: center;       
   background-color: #1e1e1e;
   color: white;
-  min-height: 100vh;
-  padding-top: 30px;
+  padding-top: 80px;        
+  box-sizing: border-box;
 }
+
 
 .banda-titulo {
   color: white;

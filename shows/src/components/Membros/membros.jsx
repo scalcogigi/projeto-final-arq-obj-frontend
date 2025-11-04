@@ -5,6 +5,7 @@ import "./Membros.css";
 export default function Membros() {
   const [membros, setMembros] = useState([]);
 
+  // mock:
   // useEffect(() => {
   //   const fetchMembros = async () => {
   //     try {
